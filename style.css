@@ -23,8 +23,13 @@ body{
     object-fit: cover;
     object-position: center;
     display: none;
+    position: absolute;
 }
 
 #carousel-wrapper img.active {
     display: block;
+}
+
+.title, .text {
+    position: relative;
 }

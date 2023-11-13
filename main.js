@@ -26,12 +26,12 @@ const cardImages = [
 console.log(cardImages);
 
 //Inserisco le immagini nel DOM
-let immaginiDaInserire = "";
-for (let i = 0; i < cardImages.length; i++) {
-    const percorsoImmagine = cardImages[i].image;
-    immaginiDaInserire += `<img src="${percorsoImmagine}">`;
-}
-document.getElementById("carousel-wrapper").innerHTML = immaginiDaInserire;
+// let immaginiDaInserire = "";
+// for (let i = 0; i < cardImages.length; i++) {
+//     const percorsoImmagine = cardImages[i].image;
+//     immaginiDaInserire += `<img src="${percorsoImmagine}">`;
+// }
+// document.getElementById("carousel-wrapper").innerHTML = immaginiDaInserire;
 
 // let titoloDaInserire= "";
 // for (let i = 0; i < cardImages.length; i++) {
