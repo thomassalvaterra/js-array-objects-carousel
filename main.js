@@ -26,6 +26,7 @@ const cardImages = [
 console.log(cardImages);
 
 //Inserisco le immagini nel DOM
+
 // let immaginiDaInserire = "";
 // for (let i = 0; i < cardImages.length; i++) {
 //     const percorsoImmagine = cardImages[i].image;
@@ -33,34 +34,38 @@ console.log(cardImages);
 // }
 // document.getElementById("carousel-wrapper").innerHTML = immaginiDaInserire;
 
-// let titoloDaInserire= "";
-// for (let i = 0; i < cardImages.length; i++) {
-//     const percorsoTitolo = cardImages[i].title;
-//     titoloDaInserire += `<div class="${percorsoTitolo}">`;
-// }
-// document.getElementById("carousel-wrapper").innerHTML = titoloDaInserire;
+let currentImg = 0;
+document.getElementById("image").src = cardImages[currentImg].image;
+document.getElementById("title").innerHTML = cardImages[currentImg].title;
+document.getElementById("text").innerHTML = cardImages[currentImg].text;
 
 //Imposto la prima immagine come attiva
-let currentImg = 0;
-const images = document.querySelectorAll("#carousel-wrapper img");
-images[currentImg].classList.add("active");
+
+// const images = document.querySelectorAll("#image");
+// images[currentImg].classList.add("active");
 
 
 //Gestisco i pulsanti
 document.getElementById("nextBtn").addEventListener("click", function () {
     console.log("avanti");
-    if (currentImg < images.length - 1) {
-        images[currentImg].classList.remove("active");
+    if (currentImg < cardImages.length - 1) {
+        // images[currentImg].classList.remove("active"); 
         currentImg++;
-        images[currentImg].classList.add("active");
+        // images[currentImg].classList.add("active");
+        document.getElementById("image").src = cardImages[currentImg].image;
+        document.getElementById("title").innerHTML = cardImages[currentImg].title;
+        document.getElementById("text").innerHTML = cardImages[currentImg].text;
     }
 });
 
 document.getElementById("prevBtn").addEventListener("click", function () {
     console.log("indietro");
     if (currentImg > 0) {
-        images[currentImg].classList.remove("active");
+        // images[currentImg].classList.remove("active");
         currentImg--;
-        images[currentImg].classList.add("active");
+        // images[currentImg].classList.add("active");
+        document.getElementById("image").src = cardImages[currentImg].image;
+        document.getElementById("title").innerHTML = cardImages[currentImg].title;
+        document.getElementById("text").innerHTML = cardImages[currentImg].text;
     }
 });
